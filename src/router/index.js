@@ -8,13 +8,23 @@ export default new Router({
   routes: [
     {
       name: 'home',
-      path: '/home',
+      path: '/',
       component: require('../views/Home')
     },
     {
-      name: 'projet',
+      name: 'blog',
+      path: '/blog',
+      component: require('../views/Blog')
+    },
+    {
+      name: 'projects',
       path: '/projets',
       component: require('../views/Projets')
+    },
+    {
+      name: 'cv',
+      path: '/cv',
+      component: require('../views/CV')
     }
   ]
 })

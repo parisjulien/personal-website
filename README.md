@@ -1,6 +1,6 @@
 # julienparis
 
-> Site personnel Julien paris
+> Here is my personal open-source website
 
 ## Build Setup
 

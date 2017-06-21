@@ -1,10 +1,10 @@
 <template>
   <nav id="v-nav">
     <div class="container">
-      <p><router-link to="home">Accueil</router-link></p>
-      <p><router-link to="projets">Projets</router-link></p>
-      <p><a href="#!">C.V</a></p>
-      <p><a href="#!">Labs</a></p>
+      <p><router-link :to="{ name: 'home' }">Accueil</router-link></p>
+      <p><router-link :to="{ name: 'blog' }">Blog</router-link></p>
+      <p><router-link :to="{ name: 'projects' }">Projets</router-link></p>
+      <p><router-link :to="{ name: 'cv' }">C.V</router-link></p>
     </div>
   </nav>
 </template>

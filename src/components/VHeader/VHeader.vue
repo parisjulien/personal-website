@@ -3,7 +3,7 @@
       <div class="container">
         <div class="row">
           <div class="col s12 center white-text">
-            <p>Je m'appel</p>
+            <p>Je m'appelle</p>
             <h1>JULIEN PARIS</h1>
             <h2>Je suis <span id="home-top-morphex">développeur web fullstack, en deuxième années de BTS SIO</span></h2>
           </div>
