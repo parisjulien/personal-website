@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import router from './router'
-import Axios from 'axios'
 
 Vue.config.productionTip = false
 
@@ -8,6 +7,5 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  Axios,
   render: h => h(require('./App'))
 })

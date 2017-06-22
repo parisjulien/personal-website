@@ -30,7 +30,6 @@ export default {
   #v-content h3 {
     color: #333;
     font-size: 22px;
-    margin: 60px 0 8px 0;
     padding: 0;
   }
 
