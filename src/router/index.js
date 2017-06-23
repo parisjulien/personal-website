@@ -25,6 +25,10 @@ export default new Router({
       name: 'cv',
       path: '/cv',
       component: require('../views/CV')
+    },
+    {
+      path: '*',
+      redirect: '/'
     }
   ]
 })

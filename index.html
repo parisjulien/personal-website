@@ -15,14 +15,15 @@
     
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-    <script src="./static/js/morphext.js"></script>
+    <script src="./static/js/typed.min.js"></script>
     <script>
       $(document).ready(function () {
-        $("#home-top-morphex").Morphext({
-          animation: "fadeInDown",
-          separator: ",",
-          speed: 5000
-        });
+        $(".typed").typed({
+			    strings: ["développeur web fullstack", "en deuxième année de BTS SIO"],
+			    typeSpeed: 30,
+          backDelay: 5000,
+          loop: true
+		    });
       });
     </script>
   </body>

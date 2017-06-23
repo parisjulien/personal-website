@@ -10,6 +10,10 @@
     <section id="github" class="valign-wrapper">
       <v-github-content user="parisjulien" class="container" />
     </section>
+
+    <section id="blog">
+      <p>test</p>
+    </section>
   </div>
 </template>
 

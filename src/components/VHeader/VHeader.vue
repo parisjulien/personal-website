@@ -5,7 +5,7 @@
           <div class="col s12 center white-text">
             <p>Je m'appelle</p>
             <h1>JULIEN PARIS</h1>
-            <h2>Je suis <span id="home-top-morphex">développeur web fullstack, en deuxième années de BTS SIO</span></h2>
+            <h2>Je suis <span id="home-top-morphex" class="typed"></span></h2>
           </div>
         </div>
       </div>
@@ -35,5 +35,27 @@ export default {
   #v-header h2, p {
     font-family: 'Raleway', sans-serif;
     font-size: 26px;
+  }
+
+  .typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+  }
+  @keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+  }
+  @-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+  }
+  @-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
   }
 </style>

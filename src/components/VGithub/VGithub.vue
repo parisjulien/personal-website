@@ -1,7 +1,7 @@
 <template>
   <div id="v-github" class="card-stacked">
     <div class="card-content" v-if="repos">
-      <p><a :href="repo.html_url">{{ repo.name }}</a></p>
+      <p><a :href="repo.html_url" target="_blank">{{ repo.name }}</a></p>
       <p class="description">{{ repo.description }}</p>
     </div>
     <div class="card-content valign-wrapper" v-else>
