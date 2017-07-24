@@ -15,7 +15,7 @@
     <div class="row">
       <div class="col s12 center">
         <p>
-          <a href="#" target="_blank" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Linkedin"><img src="/static/img/linkedin.png" alt="Linkedin"></a>
+          <a href="#" target="_blank" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="www.linkedin.com/in/julien-paris34"><img src="/static/img/linkedin.png" alt="Linkedin"></a>
           <a href="#" target="_blank" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Facebook"><img src="/static/img/fb.png" alt="Facebook"></a>
           <a href="#" target="_blank" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Twitter"><img src="/static/img/twitter.png" alt="Twitter"></a>
           <a href="#" target="_blank" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="pro.julienparis@gmail.com"><img src="/static/img/email.png" alt="Linkedin"></a>

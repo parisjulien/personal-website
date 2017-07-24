@@ -23,7 +23,7 @@ export default {
     background: url('./vheader.jpg') no-repeat top center fixed;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
   }
 
   #v-header h1, h2, p {
@@ -43,6 +43,7 @@ export default {
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
   }
+
   @keyframes blink{
     0% { opacity:1; }
     50% { opacity:0; }

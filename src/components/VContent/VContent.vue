@@ -29,7 +29,8 @@ export default {
 <style>
   #v-content h3 {
     color: #333;
-    font-size: 22px;
+    font-family: 'Bubbler One', sans-serif;
+    font-size: 40px;
     padding: 0;
   }
 
