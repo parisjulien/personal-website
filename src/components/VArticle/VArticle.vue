@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <div class="col s12">
+    <div :class="'col ' + columns">
       <div class="z-depth-1 article">
         <div class="article-header" :style="'background-image: url(' + article.img + ')'"></div>
           <div class="article-title">
@@ -25,7 +25,8 @@
 export default {
   name: 'v-article',
   props: {
-    article: { type: Object, default: null }
+    article: { type: Object, default: null },
+    columns: { type: String, default: 's12' }
   }
 }
 </script>

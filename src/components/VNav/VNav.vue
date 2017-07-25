@@ -22,6 +22,7 @@ export default {
     background: #FFF;
     color: #333;
     box-shadow: 6px 3px 22px #333;
+    z-index: 1;
   }
 
   #v-nav .container {

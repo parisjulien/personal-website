@@ -26,6 +26,17 @@
 		    });
 
         $('.carousel.carousel-slider').carousel();
+        let VNavOffset = $('#v-nav').offset()
+
+        $(document).on('scroll', function () {
+          if ($(window).scrollTop() >= VNavOffset.top) {
+            $('#v-nav').css('position', 'fixed').css('top', 0).css('left', 0).css('right', 0)
+            $('section').css('padding-top', '64px')
+          } else {
+            $('#v-nav').css('position', 'relative')
+            $('section').css('padding-top', 0)
+          }
+        })
       });
     </script>
   </body>
