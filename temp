@@ -1,0 +1,8 @@
+$(document).ready(function () {
+        $(".typed").typed({
+			    strings: ["développeur web fullstack", "en deuxième année de BTS SIO", "développeur d'application bureau / mobile"],
+			    typeSpeed: 30,
+          backDelay: 5000,
+          loop: true
+		    });
+      });

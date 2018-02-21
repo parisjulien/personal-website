@@ -1,149 +1,233 @@
 <template>
   <div id="home">
-    <section id="about" class="container valign-wrapper">
-      <v-content title="A propos de moi ?">
-        Passionné par l'informatique depuis l'age de 16 ans, j'ai consacré mon temps libre à l'apprentissage en autodidacte des technologies du web dont j'ai acquis une certaine maîtrise. Je m'interesse également au développement d'application bureau et mobile
-        ce qui me permet d'être polyvalent dans le domaine. Adepte des projets open-sources, j'aime partager mon expérience et ma passions. J'oriente donc mes études vers ce domaine avec l'ambition d'ouvrir une entreprise de développement web et d'application bureau et mobile.
-      </v-content>
-    </section>
-
-    <section id="github" class="valign-wrapper">
-      <v-github-content user="parisjulien" class="container" />
-    </section>
-
-    <section id="blog" class="valign-wrapper">
-      <div class="container">
-        <div class="row">
-          <h3>Dernier article de mon blog !</h3>
+    <jp-navigation />
+    <jp-header />
+    <jp-about-me />
+    
+    <section id="portfolio">
+      <div class="row">
+        <div class="col s12">
+          <h4>
+            Portfolio <br>
+            <span class="typed2"></span>
+          </h4>
+        </div>
+      </div>
+      
+      <div id="portfolio" class="row">
+        <div class="col s12 m4">
+          <div class="jp-card" style="background: url('/static/img/florentvargas.png') no-repeat top center;background-size: cover;">
+            <div class="jp-card-content">
+              <h3>Florentvargas.fr</h3>
+              <h5 style="background-color: darkred;">Developpement web</h5>
+            </div><a href="https://florentvargas.fr" target="_blank"></a>
+          </div>
         </div>
 
-        <v-article :article="{
-          title: 'Créer un site web avec ReactJs !', 
-          img: '/static/img/reactjs.png',
-          content: `Oh, how I wish I could believe or understand that! There's only one reasonable course of action now: kill Flexo! Bite my shiny metal ass. Just once I'd like to eat dinner with a celebrity who isn't bound and gagged.
-              Say what? I had more, but you go ahead. Moving along… Ooh, name it after me! What are their names?
-              Ven ve voke up, ve had zese wodies. Dear God, they'll be killed on our doorstep! And there's no trash pickup until January 3rd. Can I use the gun? In our darkest hour, we can stand erect, with proud upthrust bosoms.
-              I am Singing Wind, Chief of the Martians. You seem malnourished. Are you suffering from intestinal parasites? Enough about your promiscuous mother, Hermes! We have bigger probl...`,
-          author: 'Julien Paris',
-          date: '09/07/2017',
-          heure: '1h03'
-        }"></v-article>
+        <div class="col s12 m4">
+          <div class="jp-card" style="background: url('/static/img/florencereiki.png') no-repeat top center;background-size: cover;">
+            <div class="jp-card-content">
+              <h3>Florencereiki.fr</h3>
+              <h5 style="background-color: darkred;">Developpement web</h5>
+            </div><a href="https://florencereiki.fr" target="_blank"></a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="project" class="valign-wrapper">
+    <section id="blog">
       <div class="container">
-        <div class="row">
-          <h3>Mes autres projets</h3>
+        <div id="blog-text" class="row">
+          <div class="col s12">
+            <p>
+              Venez faire un tour sur mon blog, j'y rédige des articles sur toutes sortes de choses liées
+              au monde de l'informatique.
+            </p>
+          </div>
         </div>
 
-        <v-card-content :projects="projects"></v-card-content>
+        <div id="blog-button" class="row">
+          <div class="col s12 m6 offset-m3">
+            <jp-button text="Voir mon blog (soon !)" />
+          </div>
+        </div>
       </div>
     </section>
+
+    <jp-contact />
+    <jp-footer />
   </div>
 </template>
 
 <script>
-import VContent from '../components/VContent/VContent'
-import VGithubContent from '../components/VGithub/VGithubContent'
-import VArticle from '../components/VArticle/VArticle'
-import VCardContent from '../components/VCard/VCardContent'
+import JpNavigation from '@/components/JpNavigation'
+import JpHeader from '@/components/JpHeader'
+import JpAboutMe from '@/components/JpAboutMe'
+import JpCard from '@/components/JpCard'
+import JpButton from '@/components/JpButton'
+import JpContact from '@/components/JpContact'
+import JpFooter from '@/components/JpFooter'
 
 export default {
   name: 'home',
-  components: { VContent, VGithubContent, VArticle, VCardContent },
-  data () {
-    return {
-      position: 0,
-      ancres: ['#home', '#about', '#github', '#blog', '#project'],
-      projects: [{
-        title: 'PowerLabs',
-        img: './static/img/powerlabs.png'
-      }, {
-        title: 'MLO',
-        img: './static/img/mlo.png'
-      }, {
-        title: 'PowerPanel',
-        img: './static/img/powerpanel.png'
-      }]
-    }
+  components: {
+    JpNavigation,
+    JpHeader,
+    JpAboutMe,
+    JpCard,
+    JpButton,
+    JpContact,
+    JpFooter
   },
-  methods: {
-    next () {
-      if (this.position < 4) {
-        this.position++
-      }
-    }
+  mounted () {
+    $('.typed2').typed({
+      strings: ['Il reste de la place pour ton projet :)'],
+      typeSpeed: 30,
+      backDelay: 2000,
+      loop: false
+    })
   }
 }
 </script>
 
-<style scoped>
-  #about {
-    min-height: 100vh;
-  }
+<style>
 
-  .row {
-    margin-bottom: 0 !important;
-  }
-
-  h3 {
-    margin: 0 !important;
-  }
-
-  #about p {
-    color: #333;
-    font-size: 20px;
-    font-weight: 300;
-    padding: 0;
-  }
-
-  #github {
-    background: url('/static/img/github.jpg') no-repeat top center fixed;
+  #portfolio {
+    background: url('/static/img/work2.jpg') no-repeat top center fixed;
     background-size: cover;
+    padding: 0 80px 80px 80px;
   }
 
-  #blog, #project, #github {
-    width: 100%;
-    min-height: 100vh;
-    padding-top: 22px;
-    padding-bottom: 22px;
-  }
-
-  #project {
-    background: #252526;
-  }
-
-  #blog h3, #project h3 {
-    font-size: 40px;
-    padding-bottom: 22px;
-    font-family: 'Bubbler One', sans-serif;
-    text-align: center
-  }
-
-  #project h3, p {
-    color: #FFF;
-  }
-
-  @keyframes arrow {
-    0% {
-      color: #0885C2;
-    }
-    50% {
-      color: white;
-    }
-    100% {
-      color: #0885C2;
-    }
-  }
-
-  #arrow-down {
-    position: fixed;
-    bottom: 22px;
-    width: 100%;
+  #portfolio h4 {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
     text-align: center;
-    cursor: pointer;
-    color: #0885C2;
-    animation: arrow 1.2s infinite;
+    margin: 0;
+    padding: 80px 0;
+  }
+
+  #portfolio h4 span {
+    font-size: 22px;
+    font-weight: 200;
+  }
+
+  #blog {
+    padding: 80px 0;
+  }
+
+  #blog p {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .jp-card {
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: left;
+    border: 6px solid #222;
+    border-radius: 6px;
+  }
+  .jp-card * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+  }
+  .jp-card:before {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    top: 100%;
+    content: '';
+    background-color: rgba(33, 33, 33, 0.9);
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    -webkit-transition-delay: 0.25s;
+    transition-delay: 0.25s;
+  }
+  
+  .jp-card-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .jp-card h3,
+  .jp-card h5 {
+    margin: 0;
+    opacity: 0;
+    letter-spacing: 1px;
+  }
+  .jp-card h3 {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    font-weight: 400;
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+    margin-bottom: 5px;
+    font-size: 22px;
+  }
+  .jp-card h5 {
+    font-weight: normal;
+    padding: 3px 10px;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    font-size: 18px;
+  }
+  .jp-card a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  .jp-card:hover:before,
+  .jp-card.hover:before {
+    top: 10px;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
+  .jp-card:hover h3,
+  .jp-card.hover h3,
+  .jp-card:hover h5,
+  .jp-card.hover h5 {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .jp-card:hover h3,
+  .jp-card.hover h3 {
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+  }
+  .jp-card:hover h5,
+  .jp-card.hover h5 {
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+  }
+
+  @media all and (max-width: 768px) {
+    #portfolio {
+      padding: 0 22px 80px 22px;
+    }
   }
 </style>

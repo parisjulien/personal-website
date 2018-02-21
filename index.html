@@ -5,9 +5,8 @@
     <title>Julien Paris</title>
     <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Bubbler+One" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
-    <link href="./static/css/animate.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet">
+    <link href="/static/css/animate.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
   <body>
@@ -15,29 +14,7 @@
     
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-    <script src="./static/js/typed.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $(".typed").typed({
-			    strings: ["développeur web fullstack", "en deuxième année de BTS SIO", "développeur d'application bureau / mobile"],
-			    typeSpeed: 30,
-          backDelay: 5000,
-          loop: true
-		    });
-
-        $('.carousel.carousel-slider').carousel();
-        let VNavOffset = $('#v-nav').offset()
-
-        $(document).on('scroll', function () {
-          if ($(window).scrollTop() >= VNavOffset.top) {
-            $('#v-nav').css('position', 'fixed').css('top', 0).css('left', 0).css('right', 0)
-            $('section').css('padding-top', '64px')
-          } else {
-            $('#v-nav').css('position', 'relative')
-            $('section').css('padding-top', 0)
-          }
-        })
-      });
-    </script>
+    <script src="/static/js/typed.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
   </body>
 </html>

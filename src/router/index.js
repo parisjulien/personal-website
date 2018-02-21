@@ -12,19 +12,19 @@ export default new Router({
       component: require('../views/Home')
     },
     {
+      name: 'projects',
+      path: '/projets',
+      component: require('../views/Projects')
+    },
+    {
+      name: 'project',
+      path: '/projet/:id',
+      component: require('../views/Projet')
+    },
+    {
       name: 'blog',
       path: '/blog',
       component: require('../views/Blog')
-    },
-    {
-      name: 'projects',
-      path: '/projets',
-      component: require('../views/Projets')
-    },
-    {
-      name: 'cv',
-      path: '/cv',
-      component: require('../views/CV')
     },
     {
       path: '*',
